@@ -269,17 +269,14 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 		}
 	}
 
+	//Adição e Remoção
 	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
 	{
-		/*int cursorX = posVoxelCursor.x;
-		int cursorY = posVoxelCursor.y;
-		int cursorZ = posVoxelCursor.z;*/
-		/*int cursorX = rand() % MAX_X;
-		int cursorY = rand() % MAX_Y;
-		int cursorZ = rand() % MAX_Z;*/
-
-		//posVoxelCursor = glm::vec3(cursorX, cursorY, cursorZ);
 		adicionarVoxel();
+	}
+	if (key == GLFW_KEY_E && action == GLFW_PRESS)
+	{
+		removerVoxel();
 	}
 
 	//Paletas
@@ -315,10 +312,6 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	if (key == GLFW_KEY_8 && action == GLFW_PRESS)
 	{
 		indiceCor = 7; //pink
-	}
-	if (key == GLFW_KEY_MINUS && action == GLFW_PRESS)
-	{
-		removerVoxel();
 	}
 }
 
